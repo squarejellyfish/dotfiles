@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:$HOME/bin:/usr/local/bin
+# for when nvim is install from source
+export PATH="$PATH:/opt/nvim-linux64/bin"
 # export PATH=/opt/homebrew/bin:/usr/local/bin:/Users/squarejellyfish/bin:/opt/homebrew/sbin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/bin:/Users/squarejellyfish/bin:/usr/local/bin
 
 # Path to your oh-my-zsh installation.
@@ -72,7 +74,7 @@ ZSH_THEME="tjkirch"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins+=(zsh-vi-mode)
+# plugins+=(zsh-vi-mode)
 
 
 # User configuration
@@ -100,10 +102,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 
-## Set up fzf key bindings and fuzzy completion
-# echo "$(fzf --zsh)"
-
 export BAT_THEME="gruvbox-dark"
+## Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
 # this shit must be at the end file
