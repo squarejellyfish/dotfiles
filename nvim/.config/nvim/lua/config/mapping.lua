@@ -1,36 +1,3 @@
-local opt = vim.opt
-local g = vim.g
-
-opt.laststatus = 3 -- global statusline
-opt.showmode = false
-
-opt.clipboard = "unnamedplus"
-opt.cursorline = true
-
--- Indenting
-opt.expandtab = true
-opt.shiftwidth = 4
-opt.smartindent = true
-opt.tabstop = 4
-opt.softtabstop = 4
-
-opt.fillchars = { eob = " " }
-opt.ignorecase = true
-opt.smartcase = true
-opt.mouse = "a"
-
--- Numbers
-opt.number = true
-opt.numberwidth = 2
-opt.ruler = false
-opt.relativenumber = true
-opt.scrolloff = 8
-
-opt.termguicolors = true
-
-opt.whichwrap:append "<>[]hl"
-
-g.mapleader = " "
 
 local km = vim.keymap
 -- insert mode shits
@@ -74,3 +41,11 @@ km.set("x", "<leader>p", "\"_dP")
 
 -- some buffer shits
 km.set("n", "<leader>x", ":bd<CR>")
+
+-- quicklist shits
+km.set("n", "[c", "<cmd>cnext<CR>", {desc = "quickfix list next"})
+km.set("n", "]c", "<cmd>cprev<CR>", {desc = "quickfix list prev"})
+
+-- windows shits
+km.set("n", "<leader>>", "10<C-w>>")
+km.set("n", "<leader><", "10<C-w><")
