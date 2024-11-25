@@ -52,7 +52,6 @@ fi
 
 export BAT_THEME="gruvbox-dark"
 ## Set up fzf key bindings and fuzzy completion
-# source <(fzf --zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # this shit must be at the end file
