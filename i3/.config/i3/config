@@ -27,6 +27,9 @@ exec --no-startup-id xset r rate 250 40
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+# Monitor setup
+exec --no-startup-id xrandr --output HDMI-0 --mode 2560x1440 --rate 120 --pos 0x1080 --rotate normal --output DP-1 --mode 1920x1080 --rate 74.99 --pos 375x0 --rotate normal --output DP-2 --mode 3840x2160 --pos 2560x654 --rotate normal
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
