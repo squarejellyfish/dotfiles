@@ -69,3 +69,41 @@ ls.add_snippets("make", {
         t({"", "\tg++ main.cpp -o main"}),
     })
 })
+
+local texsnip = {
+    s("default", {
+        t({"\\documentclass{article}"}),
+        t({"", "\\usepackage{amsmath, amssymb}"}),
+        t({"", "\\usepackage[a4paper, total={6in, 9in}]{geometry}"}),
+        t({"", "\\usepackage{listings} % For code formatting"}),
+        t({"", "\\usepackage{xcolor} % For custom colors"}),
+        t({"", "\\usepackage{graphicx}"}),
+        t({"", "\\usepackage{fontspec}"}),
+        t({"", "\\usepackage{subcaption}"}),
+        t({"", "\\usepackage{wrapfig}"}),
+        t({"", "\\usepackage{cancel}"}),
+        t({"", "\\graphicspath{ {./figures/} }"}),
+        t({"", "\\usepackage{xparse} % Allows advanced command definitions"}),
+        t({"", "\\newcounter{problemcounter}"}),
+        t({"", "\\NewDocumentCommand{\\problem}{o}{"}),
+        t({"", "  \\noindent"}),
+        t({"", "  \\fbox{Problem %"}),
+        t({"", "    \\IfNoValueTF{#1}"}),
+        t({"", "      {\\stepcounter{problemcounter}\\arabic{problemcounter}} % If no optional arg, use counter"}),
+        t({"", "      {#1} % Else, use custom label"}),
+        t({"", "  }"}),
+        t({"", "}"}),
+        t({"", ""}),
+        t({"", "\\setmainfont{UbuntuMono Nerd Font Mono}"}),
+        t({"", "\\lstset{ frame=single } "}),
+        t({"", ""}),
+        t({"", "\\title{}"}),
+        t({"", "\\author{B11605076 Cheng-Ru}"}),
+        t({"", "\\date{\\today}"}),
+        t({"", ""}),
+        t({"", "\\begin{document}"}),
+        t({"", "\\end{document}"}),
+    })
+}
+ls.add_snippets("plaintex", texsnip)
+ls.add_snippets("tex", texsnip)

@@ -45,4 +45,11 @@ km.set("n", "<leader>rp", function() -- run python
 end)
 
 
+km.set("n", "<leader>cl", function() -- compile latex
+	local current_dir = vim.fn.expand('%:p:h')
+    local file_name = vim.fn.expand('%:p')
+	local cmd = string.format("xelatex %s", file_name)
+	require("toggleterm").exec(string.format("cd %s", current_dir))
+	require("toggleterm").exec(cmd)
+end)
 

@@ -130,3 +130,23 @@ require("rust-tools").setup({
         }
     }
 })
+
+require('lspconfig').lemminx.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+require('lspconfig').asm_lsp.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+require('lspconfig').zls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+require('lspconfig').verible.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})

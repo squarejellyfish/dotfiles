@@ -3,8 +3,7 @@ local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
-local sources = {
-    -- formatting.prettier,
+local sources = { -- formatting.prettier,
     formatting.stylua.with({
         extra_args = {
             "--indent-width",
@@ -27,4 +26,3 @@ null_ls.setup({
     debug = true,
     sources = sources,
 })
-

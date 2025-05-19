@@ -1,0 +1,1 @@
+/home/squarejellyfish/dev/probe/pasic/editor/pasic.vim
